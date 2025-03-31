@@ -1,0 +1,20 @@
+﻿<h1>About</h1>
+
+@* 
+    the PartialAsync() method return the partial view to
+    the parent view (in this case to the about page)
+*@
+<div class="box">
+    @await Html.PartialAsync("_ListPartialView")
+</div>
+
+
+@*  
+    the RenderPartialAsync() method return the partial view to the browser
+    this makes it better in performance 
+*@
+<div class="box">
+    @{
+        await Html.RenderPartialAsync("_ListPartialView");
+    }
+</div>
